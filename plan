@@ -1,0 +1,65 @@
+************************** All the Objectes *************************
+
+day = {
+  date:
+  dayOfWeek:
+  supportPersonMorning:
+  supportPersonEvening:
+  blocked: [],
+  holiday: false
+  weekend: false
+  hardAssignedPersonMorning: false
+  hardAssignedPersonEvening: false
+};
+
+
+person = {
+  name:
+  supportCount:
+  weekendSupportCount:
+  exempt: false,
+  maxSupportCount:
+};
+
+
+
+
+
+
+***********************************************************************
+
+
+
+***************************** All the Requirements ************************************
+
+
+
+# Manually override assigned person for a particular day
+# Block people for days so that they are not assigned support
+# Divide support almost equally amongst people
+# Display total supports given to person every month
+
+
+
+
+
+************************* All the Designing **********************************
+
+# Make an array with support people as objects
+# 
+
+***************************************************** All the Functions ****************************************
+
+overrideSupport(day, person) => 
+  This function takes two arguments: the day of the support calendar, and the person who is being manually assigned support on that day.
+This function has two jobs:
+  a) Remove the current support person of the day and lower their count
+  b) Assign the manual support person and increase their count
+    
+    
+runSimulation() =>
+  This is the main function of your whole page. This fucntion will do the magic and randomly assign everyone their support.
+  
+  
+randomPerson(shiftTime) => This simple function will just randomly select a person from the list and return their object
+  
